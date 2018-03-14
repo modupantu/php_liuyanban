@@ -14,7 +14,7 @@
 
 #up_ok.php === 修改留言上传页面
 
-
 #inc/conn.php ===连接数据库
 
-#inc/lib.php === 查询数据的封装函数# php_liuyanban
+#inc/lib.php === 查询数据的封装函数
+# php_liuyanban
