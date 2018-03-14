@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言页面</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            text-align: center;
+            font-size: 24px;
+            color: rebeccapurple;
+        }
+        form{
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            background: aquamarine;
+            margin: 0 auto;
+        }
+        input{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<h2>留言板</h2>
+<script>
+    function chkmsg() {
+        var obj=document.querySelector('#title');
+        if(obj.value==''){
+            alert('标题不能为空');
+            return false;
+        }
+        obj=document.querySelector("#name");
+        if (obj.value==''){
+            alert('name不能为空');
+            return false;
+        }
+        obj=document.querySelector("#content");
+        if (obj.value==''){
+            alert('content不能为空');
+            return false;
+        }
+    }
+</script>
+<form onsubmit="return chkmsg()" method="post" action="pub.php">
+    <label for="title">主题</label>
+    <input type="text" id="title" name="title" value="">
+    <label for="name">姓名</label>
+    <input type="text" name="name" id="name" value="">
+    <label for="content">内容</label>
+    <input type="text" name="content" id="content" value="">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
